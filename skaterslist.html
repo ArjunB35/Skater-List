@@ -1,0 +1,33 @@
+<!doctype HTML>
+    <html lang="">
+<script>
+        
+ 
+ var newContacts = [ {"skater":"Louie Zamora", "age":"20", "company":"K2", "Fav Trick":"Kind-grind"},
+                        {"skater":"Dustin Latimer", "age":"23", "company":"USD", "Fav Trick": "soyale"},
+                        {"skater":"Brian Shima", "age":"22", "company":"USD", "Fav Trick": "Backside royaole"}, 
+                        {"skater":"Jon Elliot", "age":"24", "company":"Razors", "Fav Trick": "X-grind"}, 
+                        {"skater":"Rob Thompson", "age":"17", "company":"Salomon", "Fav Tricks": ["true-fishbrain","topsoul", "TTS", "TTP"] } 
+                      ]
+    
+    function newContactsLookup(skaterName, skaterProp) {
+        
+        for (var i = 0; i<newContacts.length; i++)
+            if (newContacts[i].skater === skaterName) {
+                return newContacts[i][skaterProp] || "No such properties";
+            }
+        
+            return "No such skater identified within the list";
+    }
+  
+            var Output = newContactsLookup("Rob Thompson", "Fav Tricks");
+        
+            console.log(Output);
+            
+  </script>
+        
+       
+
+        
+        
+</html>
